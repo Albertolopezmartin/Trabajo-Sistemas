@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tarjetas Gráficas</title>
+    <link rel="stylesheet" href="estilo/estilo-sistemas.css">
+    <link href="https://fonts.googleapis.com/css?family=Hind+Madurai&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="imagenes-sistemas/favicon.ico" rel="icon">
+    <script src="script/js-trabajo.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <div id="title">
+                <p>Tarjetas Gráficas</p> 
+            </div>
+        
+        </header>
+        <main>
+            <div class="topnav" id="myTopnav">
+                <a href="#home" class="active">Introducción</a>
+                <a href="#tipo">Tipos</a>
+                <a href="#funcionamiento">Funcionamiento</a>
+                <a href="#instalacion">Instalación</a>
+                <a href="#marca">Marcas</a>
+                <a href="#compra">Compras</a>
+                <a href="#bibliografia">Bibliografía</a>
+                <!-- el fa tiene float right y no se ve, y al pulsarlo corta el href del vínculo y lo sustituye por una llamada onclick a una función js-->
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                  <i class="fa fa-bars"></i>
+                </a>
+              </div>
+        <a name="home"></a> <h1>Introducción</h1>
+        <p>Las tarjetas gráficas, también llamadas GPU, son un tipo de tarjeta de expansión o circuito integrado que se encargan de traducir los datos que envía el microprocesador y transformarlos en un formato visible por el usuario a traves del dispositivo de salida, ya sea un monitor o un televisor, en forma de imagenes compuestas por millones de píxeles.</p>
+        <h2>Historia de las tarjetas gráficas</h2>
+        <p>A finales de los 60, cuando se empiezan a usar los monitores como el principal elemnto de visualización de datos a favor de las impresoras, se crearon los primeros chips gráficos como el Motorola 6845, en este momento, solo eran capazes de mostrar imágenes monocromáticas de 40 x 25 píxeles.</p>
+        <img src="imagenes-sistemas/60.jpg" alt="monitor monocromatico">
+        <p>Con el éxito de los ordenadores domésticos y el consequente abaratamiento del mismo, gracias a su producción en masa, empezaron varias compañias a competir en la creación de los mismos, con ordenadores como Commodore, Amiga 2000 y Apple Macintosh. Éstos ordenadores integraban la GPU en la placa base,en la gran mayoría de los casos estas GPU estaban hechas con tecnología propietaria, llevando a una gran disparidad de como se mostraban la imagenes entre ellos. Esta situación se mantuvo hasta la aparición del puerto PCI, eliminando el cuello de botella de los puertos ISA, permitiendo la instalacion de tarjetas dedicadas a gráficos aparte de las ya integradas.</p>
+        <img src="imagenes-sistemas/maxresdefault.jpg" alt="diferencia gráficos 2D"><br>
+        <p>En 1995 aparecieron las primeras tarjetas gráficas que manejaban tanto gráficos 2D como 3D fabricadas por Matrox, ATI, S3 y Creative entre otros. Cumplían con el estándar SVGA pero con algunas funciones 3D.<br>
+            
+
+            En el año 1997, 3DFX lanzó una de las tarjetas gráficas dedicadas solo en la producción de imágenes en 3D: Voodoo. Ésta tenía una potencia considerable para la época y añadía diversos efectos 3D como Mip Mapping, Z-Buffering y Antialiasing. A partir de ésta, se lanzaron diversos modelos como el Voodoo2 de 3DFX, TNT de Riva y después, el TNT2 de NVIDIA (después de que NVIDIA adquiriera la compañia Riva).<br>
+            <img src="imagenes-sistemas/glquake.jpg" alt="diferencia gráficos 3D"><br>
+            Tal era la potencia de esas gráficas que el puerto PCI se convirtió en un cuello de botella, por lo cual Intel desarrolló el puerto AGP (Accelerated Graphics Port) el cual podía soportar la potencia de estas tarjetas.</p>
+        <p>Entre 1999 y 2002, NVIDIA se hizo con la hegemonía del mercado de tarjetas gráficas,comprando a 3DFX,la cual solo en 6 años de su creación estaba ya sufriendo grandes problemas financieros, y consolidando esta hegemonía con su popular familia de tarjetas GeForce. En ese periodo hubo gran cantidad de mejoras gráficas en el entorno 3D. Las gráficas destacadas de aquellos tiempos tenían hasta 128 MB de memoria DDR.</p>
+        
+        <a href="#title"><i class="fa fa-angle-up"></i></a>
+        <a name="tipo"></a><h1>Tipos</h1>
+        <p>Actualmente hay dos tipos de tarjetas gráficas: las tarjetas gráficas integradas directamente en la CPU o las dedicadas en forma de tarjetas de expansión.</p>
+        <h2>Tarjetas gráficas integradas</h2>
+        <img src="imagenes-sistemas/1.jpg" alt="grafica integrada">
+        <p>Las iGPU o gráficas integradas, estan integradas dentro del propio procesador. Estas gráficas integradas tienen una potencia bastante reducida ya que tienen que derivar su potencia del microprocesador, y además necesitan tomar parte de la memoria RAM del sistema para ellas mismas.</p>
+        <p>En la actualidad, tanto AMD como Intel cuentan con gráficas integradas en sus procesadores. El principal motivo es que los procesadores gráficos son muy potentes a la hora de realizar procesos paralelos, y ubicar la GPU junto con la CPU permite utilizar los gráficos integrados para realizar muchos procesos además del procesamiento de gráficos propiamente dicho.</p>
+        <h2>Tarjetas gráficas dedicadas</h2>
+        <img src="imagenes-sistemas/graphics-card.jpg" alt="gráfica dedicada"><br>
+        <p>Las tarjetas gráficas dedicadas son placas de vídeo que tienen su propia GPU, memoria gráfica(VRAM), salidas de vídeo y sistema de refrigeración, se conectan a la placa base a través de un puerto PCI-Express. Ya que estas no están ligadas al microprocesador, son mucho mas fáciles de sustituir cuando el usuario prefiera y proporcionan un nivel de rendimiento muy superior a los gráficos integrados, pero también son bastante caras si vas en busca de potencias altas.</p>
+        <a name="funcionamiento"></a><h1>Funcionamiento</h1>
+        <p>El trabajo que realizan las tarjetas gráficas es algo complejo, pero sus principios y componentes son algo mas fáciles de entender. Ahora se verán los componoentes basicos de estas tarjetas y que función desarrollan.</p>
+        <p>Para poder crear una imágen en 3D a través de datos binarios hacen falta varios procesos, la tarjeta primero crea un wireframe a través de lineas rectas. Después rasteriza la imágen(rellena los pixeles restantes). Y por ultimo añade luz, texturas y efectos. Para poder crear movimiento, el ordenador tiene que hacer estos procesos varias veces por segundo. Cada imagen final es un "frame" por lo tanto, cuando se dice que un juego va a 60 fps (frames por segundo), se realiza este proceso de construcción de imagenes 60 veces por cada segundo.</p>
+        <img src="imagenes-sistemas/wireframe.png" alt="ejemplo wireframe"><br>
+        <p>Para poder realizar esta tarea, la tarjeta gráfica necesita cuatro componentes.<br>
+        <img src="imagenes-sistemas/graphics-card-5.jpg" alt="componentes tarjeta"><br>
+        - Una conexión a la placa base para obtener los datos del microprocesador y para suministrar a la tarjeta de energía.<br>
+        - Un procesador, la GPU (graphics processing unit) para decidir que hacer con cada pixel de la pantalla. Su potencia se mide en MHz.<br>
+        - Una memoria (VRAM), para contener información sobre cada pixel y para temporalmente almacenar imagenes ya completadas (frame-buffer). Su potencia se mide en GB actualmente.<br></p>
+        <a href="#title"><i class="fa fa-angle-up"></i></a>
+        <a name="instalacion"></a><h1>Instalación</h1>
+        <p>En la actualidad, es bastante sencillo instalar una tarjeta gráfica en un ordenador de sobremesa, esta se inserta en la ranura de PCI-E x16, y después conectarla a la fuente de alimentación, esta debe de ser lo suficientemente potente como para poder administrar energía suficientemente tanto a la gráfica como al resto de componentes, por último, se debe conectar la tarjeta gráfica a nuestro monitor para que la imagen que se muestra por pantalla venga directamente de la tarjeta gráfica.<br>
+        Una vez ya esten todas las conexiones hechas, se deben instalar los drivers pertinentes, en el caso de una tarjeta NVIDIA, se descargan los drivers de la página de descargas de NVIDIA: </p>
+        <a href="https://www.nvidia.com/Download/index.aspx" target="_blank">https://www.nvidia.com/Download</a><br>
+        <p>En el caso de las tarjetas AMD el proceso es basicamente el mismo, se descargan los drivers desde la página de drivers de AMD: <a href="https://www.amd.com/es/support" target="_blank">https://www.amd.com/es/support</a>.<br></p> 
+        </p>
+        <p>En caso de que esta información no sea suficiente, aqui se incluye un video tutorial sobre como instalar una tarjeta gráfica GTX 980 Ti de NVIDIA a modo de ejemplo:</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/H1qnB7a8I1g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <br>
+        <a href="#title"><i class="fa fa-angle-up"></i></a>
+        <a name="marca"></a><h1>Marcas</h1>
+        <img src="imagenes-sistemas/descarga.jpg" alt="nvsidia vs amd"><br>
+        <p>Desde la contración del mercado durante el final de los 90 hasta ahora la única competición que ha tenido NVIDIA en cuanto a tarjetas gráficas dedicadas, tanto en el ámbito de los ordenadores como en el de las videoconsolas, ha sido ATI, ahora conocida como AMD. Intel ha hablado varias veces en los ultimos años de querer entrar en el mundo de las gráficas dedicadas, pero hasta ahora solo se han dedicado en manufacturar chips gráficos integrados para sus microprocesadores, como el Intel HD graphics 4000.</p>
+        <a href="#title"><i class="fa fa-angle-up"></i></a>
+        <a name="compra"></a><h1>Compras</h1>
+        <p>Las tarjetas gráficas se pueden encontrar en cualquier tienda dedicada a ordenadores y en vendedores online como amazon o Pccomponentes.<br>
+        Los precios de las tarjetas de gamas equivalente entre NVIDIA y AMD son:<br>
+        -Gama baja: NVIDIA GTX 1060 entre 130 y 230 euros/AMD RX 590 entre 170 y 260 euros.<br>
+        -Gama media: NVIDIA GTX 1070 entre 225 y 550 euros/AMD RX Vega 56 alrededor de 390 euros.<br>
+        -Gama alta: NVIDIA GTX 1080 entre 450 y 570 euros/ AMD RX Vega 64 alrededor de 480 euros.<br>
+        </p>
+        <a href="#title"><i class="fa fa-angle-up"></i></a>
+        <a name="bibliografia"></a><h1>Bibliografía</h1>
+        <a href="https://hardzone.es/tarjeta-grafica/" target="_blank">https://hardzone.es/tarjeta-grafica/</a><br>
+        <a href="https://computer.howstuffworks.com/graphics-card.html" target="_blank">https://computer.howstuffworks.com/graphics-card.html</a><br>
+        <a href="https://www.nvidia.com/Download/index.aspx" target="_blank">https://www.nvidia.com/Download/index.aspx</a><br>
+        <a href="https://www.amd.com/es/support" target="_blank">https://www.amd.com/es/support</a>.<br>
+        <a href="#title"><i class="fa fa-angle-up"></i></a>
+        </main>
+        <footer>
+            <p>Autor: Alberto López Martín <br>Sistemas Informáticos - curso 2019-20</p>
+            <p><a href="https://www.facebook.com/profile.php?id=100005075943522" target="_blank"><i class="fa fa-facebook-official"></i></a>
+            <a href="https://github.com/Albertolopezmartin" target="_blank"><i class="fa fa-github"></i></a></p>
+        </footer>
+    </div>
+</body>
+</html>
